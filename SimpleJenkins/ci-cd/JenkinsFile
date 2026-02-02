@@ -2,10 +2,6 @@ pipeline {
     agent {
         label "dev"
     }
-    tools {
-    }
-    options {
-    }
 
     stages {
         stage('echo') {
@@ -20,6 +16,5 @@ pipeline {
                echo 'After stage executing...'
             }
         }
-
     }
 }
