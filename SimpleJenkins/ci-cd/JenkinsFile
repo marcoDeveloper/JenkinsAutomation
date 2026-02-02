@@ -2,6 +2,15 @@ pipeline {
     agent {
         label "dev"
     }
+    tools {
+        maven 'Maven-3.8.1'  // Replace with your Maven installation name
+        jdk 'JDK-17'         // Replace with your JDK installation name
+    }
+    options {
+        timeout(time: 30, unit: 'MINUTES')
+        retry(3)
+        skipStagesAfterUnstable()
+    }
 
     stages {
         stage('echo') {
