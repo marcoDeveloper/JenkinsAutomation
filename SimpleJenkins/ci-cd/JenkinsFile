@@ -1,0 +1,22 @@
+pipeline {
+    agent {
+        label "dev"
+    }
+    tools {
+    }
+    options {
+    }
+
+    stages {
+        stage('echo') {
+            steps {
+                echo 'Hello guys...'
+            }
+        }
+
+        stage('after') {
+           // something...
+        }
+
+    }
+}
