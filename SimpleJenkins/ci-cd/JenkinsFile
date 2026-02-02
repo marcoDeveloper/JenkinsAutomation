@@ -15,7 +15,10 @@ pipeline {
         }
 
         stage('after') {
-           // something...
+            steps {
+               // something...
+               echo 'After stage executing...'
+            }
         }
 
     }
